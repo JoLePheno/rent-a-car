@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "61aaa31e-d048-4490-85e5-0b000bb9ebe4",
+		"name": "Stoïk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jo@jo.car\",\n    \"phone_number\": \"1234\",\n    \"name\": \"jo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jonathan@pace.car",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Jonathan",
+							"disabled": true
+						},
+						{
+							"key": "phone_number",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jo@jo.car\",\n    \"phone_number\": \"1234\",\n    \"name\": \"jo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jonathan@pace.car",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Jonathan",
+							"disabled": true
+						},
+						{
+							"key": "phone_number",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jo@jo.car\",\n    \"phone_number\": \"1234\",\n    \"name\": \"jo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cars",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RentACar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"car_id\": \"7c61be06-f8ea-424f-b8b6-4a8f54da4b44\",\n   \"renter_id\": \"f5fec8fb-84d2-4445-addf-a381c44e4d38\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/car/rent",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"rent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FreeCar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"car_id\": \"7c61be06-f8ea-424f-b8b6-4a8f54da4b44\",\n   \"renter_id\": \"f5fec8fb-84d2-4445-addf-a381c44e4d38\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/car/rent",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"rent"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

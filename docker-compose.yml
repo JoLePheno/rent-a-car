@@ -14,17 +14,17 @@ services:
     restart: always
 
   app:
-    build: .
+    image: jonathanfrickert/stoik:latest
     volumes:
       - .:/go/src/app
     ports:
       - "3000:3000"
     depends_on:
       - postgres
-    # deploy:
-    # #   replicas: 3
-    #   restart_policy:
-    #     condition: on-failure
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
     networks:
       - default
     links:
