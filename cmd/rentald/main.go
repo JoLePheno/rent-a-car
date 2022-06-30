@@ -17,7 +17,9 @@ func main() {
 	defer cancel()
 	store := postgres.NewRentalStore(pg.Connect(&pg.Options{
 		User:     "postgres",
-		Database: "stoik",
+		Database: "postgres",
+		Password: "password",
+		Addr:     "postgres:5432",
 	}))
 	rentalService := service.RentalService{
 		User: &user.UserController{

@@ -31,7 +31,9 @@ func main() {
 
 	db := pg.Connect(&pg.Options{
 		User:     "postgres",
-		Database: "stoik",
+		Database: "postgres",
+		Password: "password",
+		Addr:     "postgres:5432",
 	})
 	waitForPostgres(db)
 
