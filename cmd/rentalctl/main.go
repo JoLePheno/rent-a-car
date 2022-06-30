@@ -48,7 +48,7 @@ func main() {
 
 func waitForPostgres(db *pg.DB) {
 	var err error
-	waitTime := 3 * time.Second
+	waitTime := 15 * time.Second
 	waitUntil := time.Now().Add(waitTime)
 start:
 	if time.Now().After(waitUntil) {
