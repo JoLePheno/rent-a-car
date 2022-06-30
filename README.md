@@ -8,11 +8,12 @@ Back-end challenge by stoïk (https://stoikio.notion.site/Backend-Software-Engin
 
 This project is containerized you can use docker-compose to build and run the project:
 
-´docker-compose build && docker-compose up -d --scale app=1´
+`docker-compose build && docker-compose up -d --scale app=1`
 
 To run the scalable version user:
 
 `docker swarm init`
+
 `docker stack deploy -c docker-compose.yml stoikbackend`
 
 To view active container:
@@ -26,3 +27,6 @@ In order to rent a car you'll need to create an user with *CreateUser*, if you'r
 
 Once you have created your user you can start the rental process, first get your *userID* using the *GetUser* request. Once you have your *userID* fetch the list of cars with *GetCars* request, there you'lle be able to make a *RentCar* request and get an available car using your *userID* with the *carID*.
 When you're done with your car you can freed it using the *FreeCar* request.
+
+## In case of error:
+In case of error during the build you may replace in `docker-compose.yml:17` the tag `latest` by `x86`
