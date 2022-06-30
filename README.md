@@ -8,7 +8,7 @@ Back-end challenge by stoïk (https://stoikio.notion.site/Backend-Software-Engin
 
 This project is containerized you can use docker-compose to build and run the project:
 
-´docker-compose build && docker-compose up -d´
+´docker-compose build && docker-compose up -d --scale app=1´
 
 To run the scalable version user:
 
